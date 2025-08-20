@@ -6,9 +6,9 @@ This node currently converts raw lidar data from one scan of the robot into a 2D
 #include <cmath>
 #include <stdio.h>
 #include <vector>
+#include <mapprocessor.hpp>
 
-struct Point2D { float x; float y; };
-
+// Convert laser scan data to 2D points
 std::vector<Point2D> scanToPoints(const std::vector<float>& ranges,
                                   float angle_min, float angle_increment) {
     std::vector<Point2D> pts;
